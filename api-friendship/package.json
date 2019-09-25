@@ -1,0 +1,17 @@
+{
+  "name": "social-devs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jose-leles/social-devs.git",
+  "author": "joseleles <jojeca.leles@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "rodar": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
