@@ -9,7 +9,7 @@ route.get('/my-friends', (rq, rs)=>{
 
 route.post('/invite-user', (rq, rs)=>{
     var {logado} = rq;
-    var {user} = rq.body.user;
+    var {user} = rq.body;
     var result = Users.invite(logado.id, user.id);
     if(result = 0){
            //TODO: send event to web-socket user.id listener
@@ -19,13 +19,12 @@ route.post('/invite-user', (rq, rs)=>{
 
 route.get('/my-invites', (rq, rs)=>{
     var {logado} = rq;
-    rs.json(Users.listMyInvites(logado.id));
+    rs.json(Users.listMyInvites(logado.id)); // TODO criar
 });
 
 route.post('/answer-invite', (rq, rs)=>{
     var {logado} = rq;
-    var {user} = rq.body.user;
-    var {answer} = rq.body.answer;
+    var {user,answer} = rq.body;
     rs.json(Users.setInviteStatus(logado.id,user.id, answer));
 });
 

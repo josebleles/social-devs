@@ -6,3 +6,5 @@ class User {
         this.senha = senha;
     }
 }
+
+module.exports = User;
