@@ -1,5 +1,5 @@
 const express = require('express');
-const Users = require('../database/Users');
+const Users = require('../database/UsersDAO');
 const route = express.Router();
 
 route.get('/my-friends', (rq, rs)=>{
